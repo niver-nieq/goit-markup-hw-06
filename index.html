@@ -26,9 +26,15 @@
                         title="Ir a pagina">WebStudio</a>
                     <!-- La navegación а otros sitios -->
                     <ul class="link-nav">
-                        <li class="current"><a href="./index.html">Estudio</a></li>
-                        <li><a href="./portfolio.html">Portafolio</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li class="current">
+                            <a href="./index.html">Estudio</a>
+                        </li>
+                        <li>
+                            <a href="./portfolio.html">Portafolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacto</a>
+                        </li>
                     </ul>
                     <!-- target="_blank" Este atribito o etiqueta no regideriona a otra pagina cuando hacemos click sobre algun tipo en especifico del texto -->
                     <!-- title="" Nos pone una descripción cuando pones el cursor sobre algun texto o algo en especifico -->
@@ -62,7 +68,11 @@
         </section>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="button-modal-close" data-modal-close>X</button>
+                <button class="button-modal-close" type="button" data-modal-close>
+                    <svg class="icons-close" width="11" height="11">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
                 <h3 class="title-modal">Deje sus datos, nos contactaremos con usted</h3>
                 <form class="formu" name="Conocer al cliente" autocomplete="off" novalidate>
                     <div class="form-modal">
@@ -77,15 +87,16 @@
                         <label for="correo">E-mail</label>
                         <input class="modal-datos" type="text" name="correo" id="correo">
                     </div>
-                    <div class="form-modal">
+                    <div class="form-modal-comen">
                         <label for="ideas">Comentarios</label>
                         <textarea class="modal-coment" type="text" name="ideas" id="ideas"
                             placeholder="Introduzca el texto"></textarea>
                     </div>
-                    <div class="form-modal">
-                        <label for="verificar">
-                            <input type="checkbox">
-                            Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+                    <div class="form-modal-check">
+                        <label class="descrip" for="verificar">
+                            <input class="checkbox" type="checkbox">
+                            <p class="descrip">Estoy de acuerdo con el boletín informativo y acepto los Términos y
+                                Condiciones</p>
                         </label>
                     </div>
                     <button class="submit" type="submit">Enviar</button>
@@ -375,7 +386,11 @@
                     <input class="input-footer" type="correo" name="correo" id="correo"
                         placeholder="Correo Electrónico">
                 </div>
-                <button class="for-button" type="submit">Suscríbase</button>
+                <button class="for-button" type="submit">Suscríbase
+                    <svg class="icon-enviar" widht="24" height="24">
+                        <use href="./images/icons.svg#icon-enviar-cono"></use>
+                    </svg>
+                </button>
             </form>
         </div>
     </footer>

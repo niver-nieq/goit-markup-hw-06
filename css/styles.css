@@ -374,8 +374,6 @@ main li {
 .conten-prin {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/images2/Imagen.jpg);
     background-size: cover;
-    max-width: 1600px;
-    min-height: 600px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin: auto;
     padding-top: 200px;
@@ -806,6 +804,7 @@ main li {
     margin: 0 auto;
     background-color: rgba(33, 150, 243, 0.9);
     top: 294px;
+    opacity: cubic-bezier(0.4, 0, 0.2, 1), visibility cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
 
@@ -901,6 +900,8 @@ footer {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
+/* Trabajamos en el Modal */
 .backdrop {
     position: fixed;
     top: 0;
@@ -928,18 +929,26 @@ footer {
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     width: 528px;
-    height: 581px;
+    height: 600px;
     margin: auto;
 }
 
 .button-modal-close {
     position: relative;
-    left: 500px;
-    padding: 4px 8px;
+    width: 30px;
+    height: 30px;
+    left: 492px;
+    margin-top: 8px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: #ffffff;
     cursor: pointer;
+    color: #000000;
+}
+
+.button-modal-close:hover {
+    fill: var(--var-color-fondo-hover-focus);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .formu {
@@ -955,6 +964,43 @@ footer {
     margin-bottom: 10px;
 }
 
+.form-modal-comen {
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-modal-check {
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.descrip {
+    display: flex;
+    margin: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+
+}
+
+.checkbox {
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+    margin-top: 5px;
+}
+
 .submit {
     background-color: #2196F3;
     display: block;
@@ -963,24 +1009,38 @@ footer {
 
     width: 200px;
     height: 50px;
-    background: #188CE8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border: #188CE8;
+    border: #2196F3;
 
-    font-family: 'inherit';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.875em;
     /* identical to box height, or 188% */
-
-
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-
     color: #FFFFFF;
+}
+
+.submit:hover {
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.title-modal {
+    text-align: center;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 12px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
 }
 
 .modal-datos {
@@ -988,6 +1048,11 @@ footer {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    margin-top: 4px;
+}
+
+.modal-datos:hover {
+    border-color: #2196F3;
 }
 
 .modal-coment {
@@ -996,6 +1061,11 @@ footer {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin: 0 auto;
+    margin-top: 4px;
+}
+
+.modal-coment:hover {
+    border-color: #2196F3;
 }
 
 textarea {
@@ -1014,13 +1084,18 @@ textarea {
 }
 
 .for-button {
+    display: flex;
     width: 200px;
     height: 50px;
     margin-top: 36px;
+    padding-left: 39px;
+    padding-right: 28px;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: #2196F3;
+    cursor: pointer;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-style: normal;
     font-weight: 700;
@@ -1031,6 +1106,7 @@ textarea {
     text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+    fill: #FFFFFF;
 }
 
 .input-footer {
@@ -1042,6 +1118,10 @@ textarea {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: #2F303A;
+    opacity: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
     font-style: normal;
@@ -1053,6 +1133,8 @@ textarea {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
+
 .tex-for {
     font-style: normal;
     font-weight: 700;
@@ -1060,6 +1142,12 @@ textarea {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: #FFFFFF;
+}
+
+.icon-enviar {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    margin-left: 20px
 }
