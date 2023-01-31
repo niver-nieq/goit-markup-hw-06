@@ -1066,8 +1066,8 @@ footer {
     font-size: 12px;
     line-height: 1.166em;
     letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
+    /* color: rgba(117, 117, 117, 0.5); */
+    color: rgba(33, 33, 33, 1);
 }
 
 .form-icons {
