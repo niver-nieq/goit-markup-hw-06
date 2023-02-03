@@ -425,15 +425,13 @@ main li {
     letter-spacing: 0.06em;
     cursor: pointer;
     border-radius: 4px;
-    border: 2px solid var(--brand-color);
+    border: none;
 }
 
 .boton:hover,
 .boton:focus,
 .boton:active {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background: var(--var-color-fondo-hover-focus);
-    color: var(--var-colo-text-hover-focus);
 }
 
 .principal-detalles {
@@ -689,7 +687,7 @@ main li {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--var-colo-text-hover-focus);
-    border: 2px solid var(--brand-color);
+    border: none;
     border-radius: 4px;
     Background: var(--var-color-fondo-hover-focus);
 }
@@ -705,7 +703,7 @@ main li {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.625em;
-    border: 2px solid var(--brand-color);
+    border: none;
     border-radius: 4px;
     /* identical to box height, or 162% */
     text-align: center;
@@ -931,6 +929,10 @@ footer {
     width: 528px;
     height: 600px;
     margin: auto;
+    opacity: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-modal-close {
@@ -944,11 +946,14 @@ footer {
     background: #ffffff;
     cursor: pointer;
     color: #000000;
+    opacity: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-modal-close:hover {
     fill: var(--var-color-fondo-hover-focus);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .formu {
@@ -1007,7 +1012,7 @@ footer {
     width: 200px;
     height: 50px;
     border-radius: 4px;
-    border: #2196F3;
+    border: none;
 
     font-style: normal;
     font-weight: 700;
@@ -1136,7 +1141,7 @@ textarea {
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border: #2196F3;
+    border: none;
     cursor: pointer;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
