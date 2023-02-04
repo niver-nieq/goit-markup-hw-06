@@ -956,7 +956,8 @@ footer {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-modal-close:hover {
+.button-modal-close:hover,
+.button-modal-close:focus {
     fill: var(--var-color-fondo-hover-focus);
 }
 
@@ -1089,7 +1090,8 @@ footer {
     transform: translateY(-210%);
 }
 
-.modal-datos:hover+.form-icons {
+.modal-datos:hover+.form-icons,
+.modal-datos:focus+.form-icons {
     fill: #2196F3;
 }
 
